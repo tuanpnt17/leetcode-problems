@@ -4,14 +4,16 @@
 package Arrays101;
 
 /**
- *  Given a binary array nums, return the maximum number of consecutive 1's in the array.
- * 
+ * Given a binary array nums, return the maximum number of consecutive 1's in
+ * the array.
+ *
  */
 public class MaxConsecutiveOnes {
+
     public static void main(String[] args) {
-        int[] nums = {1,1,0,1,1,0,1,1,1,1};
+        int[] nums = {1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1};
         System.out.println(findMaxConsecutiveOnes(nums));
-        
+
     }
 
     private static int findMaxConsecutiveOnes(int[] nums) {
@@ -20,11 +22,10 @@ public class MaxConsecutiveOnes {
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == 1) {
                 count++;
-                if (count > maxCount)
+                if (count > maxCount) {
                     maxCount = count;
+                }
             } else {
-                if (count > maxCount)
-                    maxCount = count;
                 count = 0;
             }
         }
